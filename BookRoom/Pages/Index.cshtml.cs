@@ -17,12 +17,7 @@ namespace BookRoom.Pages
             _logger = logger;
         }
 
-        public IndexModel(ILogger<IndexModel> logger, BookingService bs)
-        {
-            _logger = logger;
-            Booking = bs.GetAll();
-            _bookingService = bs;
-        }
+        
 
         public void OnGet()
         {
