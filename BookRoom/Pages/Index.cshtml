@@ -1,0 +1,182 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .card-description {
+            color: #666;
+            margin: 0 0 15px 0;
+        }
+
+        .card-features {
+            margin: 0 0 15px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .card-features li {
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+            }
+
+                .card-features li:before {
+                    content: "✓";
+                    color: green;
+                    margin-right: 8px;
+                }
+
+        .card-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-right: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+            .card-button:hover {
+                background-color: #0056b3;
+            }
+
+            .card-button:active {
+                background-color: #004080;
+            }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DSV Lokaler</h1>
+
+    <div class="container">
+        <!-- Room 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Modern Meeting Room" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Lokale A</h3>
+                <ul class="card-features">
+                    <li>Kapacitet: 12 personer</li>
+                    <li>Projektor: Nej</li>
+                    <li>Whiteboard: Ja</li>
+                    <li>Kaffe/te: Ja</li>
+                </ul>
+                <div class="time-slots">
+                    <a href="#" class="card-button">10-12</a>
+                    <a href="#" class="card-button">12-14</a>
+                    <a href="#" class="card-button">14-16</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Conference Room" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Lokale B</h3>
+                <ul class="card-features">
+                    <li>Kapacitet: 18 personer</li>
+                    <li>Projektor: Ja</li>
+                    <li>Video Conference: Ja</li>
+                    <li>Kaffe/te: Ja</li>
+                </ul>
+                <div class="time-slots">
+                    <a href="#" class="card-button">10-12</a>
+                    <a href="#" class="card-button">12-14</a>
+                    <a href="#" class="card-button">14-16</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Executive Meeting Room" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Lokale C</h3>
+                <ul class="card-features">
+                    <li>Kapacitet: 20 personer</li>
+                    <li>Projektor: Ja</li>
+                    <li>Smart Board: Ja</li>
+                    <li>Kaffe/te: Ja</li>
+                </ul>
+                <div class="time-slots">
+                    <a href="#" class="card-button">10-12</a>
+                    <a href="#" class="card-button">12-14</a>
+                    <a href="#" class="card-button">14-16</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
